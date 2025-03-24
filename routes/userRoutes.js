@@ -3,7 +3,7 @@ import { registerUser, loginUser, sendFriendRequest, acceptFriendRequest, getFri
 
 const router = express.Router();
 
-router.post('/register', registerUser);
+router.post('/signup', registerUser);
 router.post('/login', loginUser);
 router.post('/send-request', sendFriendRequest);
 router.post('/accept-request', acceptFriendRequest);
