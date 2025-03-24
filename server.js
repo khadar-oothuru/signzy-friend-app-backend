@@ -14,9 +14,15 @@ app.use(cors());
 // Routes
 app.use('/api/users', userRoutes);
 
+
 const PORT = process.env.PORT || 5000;
 
-// Connect to MongoDB and Start Server
+app.get('/', (req, res) => {    
+    res.send('Snizy Backend');
+}
+)
+
+
 mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
         console.log('MongoDB Connected');
