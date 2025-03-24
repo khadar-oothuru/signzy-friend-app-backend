@@ -17,10 +17,9 @@ app.use('/api/users', userRoutes);
 
 const PORT = process.env.PORT || 5000;
 
-app.get('/', (req, res) => {    
-    res.send('Snizy Backend');
-}
-)
+app.get('/', (req, res) => {
+    res.send('API is running  (Signzy)...');
+})
 
 
 mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
