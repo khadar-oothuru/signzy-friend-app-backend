@@ -4,7 +4,7 @@ import cors from 'cors';
 import userRoutes from './routes/userRoutes.js';
 import connectDB from './config/db.js'; 
 import favicon from 'serve-favicon';
-
+import path from 'path';  
 
 dotenv.config();
 
