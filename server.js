@@ -3,11 +3,14 @@ import dotenv from 'dotenv';
 import cors from 'cors';
 import userRoutes from './routes/userRoutes.js';
 import connectDB from './config/db.js'; 
+import favicon from 'serve-favicon';
+
 
 dotenv.config();
 
 connectDB();
 const app = express();
+app.use(favicon(path.join(process.cwd(), 'public', 'favicon.ico')));
 
 app.use(express.json());
 app.use(cors());
